@@ -18,13 +18,20 @@ public class Library {
     }
 
     public void listBooks() {
-        for (String book : books) {
-            printStream.println(book);
+        if(books.size()==0)
+            printStream.println("");
+        else {
+            for (String book : books) {
+                printStream.println(book);
+            }
         }
     }
 
     public void welcome(DateTime date) {
         String timeString = dateTimeFormatter.print(date);
-        printStream.println("Welcome to the library! The current time is " + timeString);
+        if(timeString=="")
+            printStream.println("Welcome to the library!");
+        else
+            printStream.println("Welcome to the library! The current time is " + timeString);
     }
 }
