@@ -10,15 +10,17 @@ public class Account {
         this.balance = balance;
     }
 
-    // returns new balance after deposit
-    public int depositMoney(int d) {
-        return balance+d;
+    public void depositMoney(int depositAmount) {
+        balance+=depositAmount;
     }
 
-    // returns new balance after withdrawal, unless it will overdraw your funds, then just return the old balance
-    public int withdrawMoney(int w) {
-        if((balance-w)>0)
-            return balance-w;
-        return balance;
+    public void withdrawMoney(int withdrawalAmount) {
+        if((balance-withdrawalAmount)>0)
+            balance-=withdrawalAmount;
     }
+
+    public int checkBalance() {
+       return balance;
+    }
+
 }
