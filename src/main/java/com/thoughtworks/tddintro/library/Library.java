@@ -18,12 +18,14 @@ public class Library {
     }
 
     public void listBooks() {
+        StringBuilder compiledBooks = new StringBuilder();
         if(books.size()==0)
             printStream.println("");
         else {
             for (String book : books) {
-                printStream.println(book);
+                compiledBooks.append(book + ", ");
             }
+            printStream.println(compiledBooks.toString());
         }
     }
 

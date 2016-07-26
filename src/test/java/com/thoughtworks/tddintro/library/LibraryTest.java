@@ -66,7 +66,7 @@ public class LibraryTest {
         books.add("Ishmael");
         library.listBooks();
 
-        verify(printStream).println(books.toString());
+        verify(printStream).println("Harry Potter, Ishmael, ");
     }
 
     /*
